@@ -117,14 +117,13 @@
           $('#map_canvas').css('height', (h - offsetTop));
         }).resize();
         
-        $(function() {
-          var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-            googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
-            locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
-            locationScope:      "chicago"
-          });
+var myMap = new ServicesMap({
+  fusionTableId:      "1ljO9xX-UiZ3laD_UDxE_puQDB9Hh2SUw9zWBcAEl",
+  googleApiKey:       "AIzaSyB_AfJltyz2kUtqc-i8LXH9MWybQkdej4E",
+  locationColumn:     "'Agency Address'",
+  map_center:         [41.844369, -87.714788],
+  locationScope:      "chicago"
+});
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
       
