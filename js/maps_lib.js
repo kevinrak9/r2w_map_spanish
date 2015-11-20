@@ -167,9 +167,18 @@
         var type_column = "'Mental Health Services - Population Served'";
         var tempWhereClause = [];
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Adults");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+        
+        var type_column = "'Mental Health Services - Population Served'";
+        var tempWhereClause = [];
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("Youth");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+        
+        var type_column = "'Mental Health Services - Population Served'";
+        var tempWhereClause = [];
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Families");
-        self.whereClause += " OR " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
