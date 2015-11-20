@@ -71,11 +71,7 @@
         $("#result_box").hide();
 
         //-----custom initializers-----
-        var type_column = "'Adult Services'";
-        var tempWhereClause = [];
-            if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
-        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
-        
+
         //-----end of custom initializers-----
 
         //run the default search when page loads
@@ -168,6 +164,11 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
+        var type_column = "'Adult Services'";
+        var tempWhereClause = [];
+        if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
+        
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
