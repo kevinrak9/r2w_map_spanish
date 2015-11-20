@@ -163,6 +163,12 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
+        var type_column = "'Mental Health Services - Population Served'";
+        var tempWhereClause = [];
+            if ( $("#rbType1").is(':checked')) tempWhereClause.push("Healthcare");
+            if ( $("#rbType2").is(':checked')) tempWhereClause.push("Property");
+            if ( $("#rbType3").is(':checked')) tempWhereClause.push("Public");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
