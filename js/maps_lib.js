@@ -175,6 +175,7 @@
         var type_column = "'Mental Health Services - Population Served'";
         var tempWhereClause = [];
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Families");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; 
 
         //-----end of custom filters-----
 
