@@ -165,10 +165,13 @@
         
         //-----custom filters-----
         var type_column = "'Adult Services'";
+        var tempWhereClause = [];
         if ( $("#rbType1").is(':checked')) tempWhereClause.push("Y");
         var type_column = "'Youth Services'";
+        var tempWhereClause = [];
         if ( $("#rbType1").is(':checked')) tempWhereClause.push("Y");        
         var type_column = "'Family Services'";
+        var tempWhereClause = [];
         if ( $("#rbType1").is(':checked')) tempWhereClause.push("Y");
         //-----end of custom filters-----
 
