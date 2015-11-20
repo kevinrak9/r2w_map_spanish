@@ -164,7 +164,7 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var type_column = "'Adult Services'";
+        (var type_column = "'Adult Services'";
         var tempWhereClause = [];
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
         var type_column = "'Youth Services'";
@@ -172,7 +172,7 @@
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("Y");
         var type_column = "'Family Services'";
         var tempWhereClause = [];
-        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Y");
+        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Y"););
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; 
         //-----end of custom filters-----
 
