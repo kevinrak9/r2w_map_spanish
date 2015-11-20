@@ -169,7 +169,7 @@
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Adults");
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("Youth");
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Families");
-        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+        self.whereClause += " OR " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
