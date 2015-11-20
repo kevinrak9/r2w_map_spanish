@@ -164,11 +164,15 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var type_column = "'Mental Health Services - Population Served'";
+        var type_column = "'Adult Services'";
         var tempWhereClause = [];
-        if ( $("#cbType1").is(':checked')) tempWhereClause.push("Adults");
-        if ( $("#cbType2").is(':checked')) tempWhereClause.push("Youth");
-        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Families");
+        if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
+        var type_column = "'Youth Services'";
+        var tempWhereClause = [];
+        if ( $("#cbType2").is(':checked')) tempWhereClause.push("Y");
+        var type_column = "'Family Services'";
+        var tempWhereClause = [];
+        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Y");
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')"; 
         //-----end of custom filters-----
 
