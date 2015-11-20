@@ -165,8 +165,11 @@
         
         //-----custom filters-----
         var type_column = "'Adult Services'";
-        var tempWhereClause = [];
-        if ( $("#rbType1").is(':checked')) tempWhereClause.push("Y");
+            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=1";
+        var type_column = "'Youth Services'";
+            if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + type_column + "=2";
+        var type_column = "'Family Services'";
+            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=3";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
