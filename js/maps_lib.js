@@ -167,9 +167,17 @@
         var type_column = "'Adult Services'";
         var tempWhereClause = [];
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+        
+        var type_column = "'Youth Services'";
+        var tempWhereClause = [];
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("Y");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
+        
+        var type_column = "'Family Services'";
+        var tempWhereClause = [];
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Y");
-        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";        
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";   
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
