@@ -167,7 +167,7 @@
         var type_column = "'Adult Services'";
         var tempWhereClause = [];
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
-        
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";        
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
