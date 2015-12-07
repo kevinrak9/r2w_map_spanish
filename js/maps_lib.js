@@ -164,8 +164,18 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var type_column = "'Adult Services'";
-            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=1";
+        var type_column = "'Population Served'";
+        var searchType = type_column + " IN (-1,";
+            if ( $("#cbType1").is(':checked')) searchType += "1,";
+            if ( $("#cbType1").is(':checked')) searchType += "12,";
+            if ( $("#cbType1").is(':checked')) searchType += "123,";
+            if ( $("#cbType2").is(':checked')) searchType += "12,";
+            if ( $("#cbType2").is(':checked')) searchType += "123,";
+            if ( $("#cbType2").is(':checked')) searchType += "23,";
+            if ( $("#cbType3").is(':checked')) searchType += "123,";
+            if ( $("#cbType3").is(':checked')) searchType += "13,";
+            if ( $("#cbType3").is(':checked')) searchType += "3,";
+            self.whereClause += " AND " + searchType.slice(0, searchType.length - 3) + ")";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
