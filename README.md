@@ -1,3 +1,7 @@
+This is the Roots to Wellness Services Directory. 
+It is built on the Fusion Table Searchable Map Template, designed by Derek Eder with other contributors. 
+The directory's markdown file is below, followed by the original template's markdown file. 
+
 # Fusion Table Searchable Map Template
 You want to put your data on a searchable, filterable map. This is a free, open source template to help you do it.
 
