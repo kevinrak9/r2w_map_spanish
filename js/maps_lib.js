@@ -166,6 +166,7 @@
         //-----custom filters-----
         var type_column = "'Population Served'";
         var searchType = type_column + " IN (-1,";
+            if ( $("#cbType4").is(':checked')) searchType += "0,";
             if ( $("#cbType1").is(':checked')) searchType += "1,";
             if ( $("#cbType1").is(':checked')) searchType += "12,";
             if ( $("#cbType1").is(':checked')) searchType += "123,";
