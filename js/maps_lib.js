@@ -178,18 +178,6 @@
             if ( $("#cbType3").is(':checked')) searchType += "3,";
             self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
-        var type_column = "'Services Offered'";
-        var tempWhereClause = [];
-            if ( $("#cbType11").is(':checked')) tempWhereClause.push("1");
-            if ( $("#cbType12").is(':checked')) tempWhereClause.push("2");
-            if ( $("#cbType13").is(':checked')) tempWhereClause.push("3");
-            if ( $("#cbType14").is(':checked')) tempWhereClause.push("4");
-            if ( $("#cbType15").is(':checked')) tempWhereClause.push("5");
-            if ( $("#cbType16").is(':checked')) tempWhereClause.push("6");
-            if ( $("#cbType17").is(':checked')) tempWhereClause.push("7");
-            if ( $("#cbType18").is(':checked')) tempWhereClause.push("8");
-            self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
-
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
