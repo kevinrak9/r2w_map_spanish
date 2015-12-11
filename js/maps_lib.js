@@ -179,7 +179,7 @@
             self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
         if ( $("#select_services").val() != "")
-              self.whereClause += " AND 'Services Offered' = '" + $("#select_type").val() + "'";
+              self.whereClause += " AND 'Services Offered' = '" + $("#select_services").val() + "'";
 
         //-----end of custom filters-----
 
