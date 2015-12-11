@@ -178,9 +178,26 @@
             if ( $("#cbType3").is(':checked')) searchType += "3,";
             self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
+        var type_column = "'Individual Therapy'";
+            if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=1";
+        var type_column = "'Group Therapy'";
+            if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + type_column + "=2";
+        var type_column = "'Family Therapy'";
+            if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=3";
+        var type_column = "'Couples Therapy'";
+            if ( $("#rbType4").is(':checked')) self.whereClause += " AND " + type_column + "=4";
+        var type_column = "'Parenting Workshop'";
+            if ( $("#rbType5").is(':checked')) self.whereClause += " AND " + type_column + "=5";
+        var type_column = "'Case Management'";
+            if ( $("#rbType6").is(':checked')) self.whereClause += " AND " + type_column + "=6";
+        var type_column = "'Psychiatric Care/Medication'";
+            if ( $("#rbType7").is(':checked')) self.whereClause += " AND " + type_column + "=7";
+        var type_column = "'Referrals/Outreach'";
+            if ( $("#rbType8").is(':checked')) self.whereClause += " AND " + type_column + "=8";
+/*
         if ( $("#select_services").val() != "")
               self.whereClause += " AND 'Services Offered' = '" + $("#select_services").val() + "'";
-
+*/
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
