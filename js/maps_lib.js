@@ -180,11 +180,11 @@
             self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 */
         var type_column = "'Adult Services'";
-            if ( $("#rbType12").is(':checked')) self.whereClause += " AND " + population_column + "=12";
+            if ( $("#rbPopulation12").is(':checked')) self.whereClause += " AND " + population_column + "=1";
         var type_column = "'Youth Services'";
-            if ( $("#rbType13").is(':checked')) self.whereClause += " AND " + population_column + "=13";
+            if ( $("#rbPopulation13").is(':checked')) self.whereClause += " AND " + population_column + "=2";
         var type_column = "'Family Services'";
-            if ( $("#rbType14").is(':checked')) self.whereClause += " AND " + population_column + "=14";
+            if ( $("#rbPopulation14").is(':checked')) self.whereClause += " AND " + population_column + "=3";
 
         var type_column = "'Individual Therapy'";
             if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=1";
