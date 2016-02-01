@@ -179,28 +179,28 @@
             if ( $("#cbType3").is(':checked')) searchType += "3,";
             self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 */
-        var type_column = "'Adult Services'";
+        var type_column = "'Servicios para adultos'";
             if ( $("#rbPopulation12").is(':checked')) self.whereClause += " AND " + type_column + "=1";
-        var type_column = "'Youth Services'";
+        var type_column = "'Servicios para jovenes'";
             if ( $("#rbPopulation13").is(':checked')) self.whereClause += " AND " + type_column + "=2";
-        var type_column = "'Family Services'";
+        var type_column = "'Servicios para familias'";
             if ( $("#rbPopulation14").is(':checked')) self.whereClause += " AND " + type_column + "=3";
 
-        var type_column = "'Individual Therapy'";
+        var type_column = "'Terapia individual'";
             if ( $("#rbType1").is(':checked')) self.whereClause += " AND " + type_column + "=1";
-        var type_column = "'Group Therapy'";
+        var type_column = "'Terapia de grupo'";
             if ( $("#rbType2").is(':checked')) self.whereClause += " AND " + type_column + "=2";
-        var type_column = "'Family Therapy'";
+        var type_column = "'Terapia familiar'";
             if ( $("#rbType3").is(':checked')) self.whereClause += " AND " + type_column + "=3";
-        var type_column = "'Couples Therapy'";
+        var type_column = "'Terapia de pareja'";
             if ( $("#rbType4").is(':checked')) self.whereClause += " AND " + type_column + "=4";
-        var type_column = "'Parenting Workshop'";
+        var type_column = "'Taller de crianza de los hijos'";
             if ( $("#rbType5").is(':checked')) self.whereClause += " AND " + type_column + "=5";
-        var type_column = "'Case Management'";
+        var type_column = "'Gestion de casos'";
             if ( $("#rbType6").is(':checked')) self.whereClause += " AND " + type_column + "=6";
-        var type_column = "'Psychiatric Care/Medication'";
+        var type_column = "'Atencion psiquiatrica/medicamento'";
             if ( $("#rbType7").is(':checked')) self.whereClause += " AND " + type_column + "=7";
-        var type_column = "'Referrals/Outreach'";
+        var type_column = "'Extension/referencia'";
             if ( $("#rbType8").is(':checked')) self.whereClause += " AND " + type_column + "=8";
 /*
         if ( $("#select_services").val() != "")
