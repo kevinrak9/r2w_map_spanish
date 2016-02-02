@@ -196,7 +196,7 @@
             if ( $("#rbType4").is(':checked')) self.whereClause += " AND " + type_column + "=4";
         var type_column = "'Taller de crianza de los hijos'";
             if ( $("#rbType5").is(':checked')) self.whereClause += " AND " + type_column + "=5";
-        var type_column = "'Gestion de casos'";
+        var type_column = "'Asistencia a conectar con servicios'";
             if ( $("#rbType6").is(':checked')) self.whereClause += " AND " + type_column + "=6";
         var type_column = "'Atencion psiquiatrica/medicamento'";
             if ( $("#rbType7").is(':checked')) self.whereClause += " AND " + type_column + "=7";
